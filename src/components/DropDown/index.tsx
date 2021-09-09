@@ -1,7 +1,4 @@
-import { useState } from 'react';
-import { useRef } from 'react';
-import { useLayoutEffect } from 'react';
-import { ReactElement } from 'react';
+import { useEffect, useRef, useState, ReactElement } from 'react';
 import { FaCaretDown } from 'react-icons/fa';
 import { DropDownContainer } from './styles';
 
@@ -20,7 +17,7 @@ export const DropDown = ({ title, items }: DropDownProps): ReactElement => {
     const toggle = () => setOpen(!open);
     const ref = useRef<HTMLDivElement|null>(null);
     
-    useLayoutEffect(() => {
+    useEffect(() => {
         const checkIfClickedOutside = (e: MouseEvent) => {
             if (open && ref.current && !ref.current.contains(e.target as Node)) {
                 setOpen(false);

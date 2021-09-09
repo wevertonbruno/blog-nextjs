@@ -1,4 +1,4 @@
-import { MutableRefObject, useEffect, useLayoutEffect, useRef, useState } from "react";
+import { MutableRefObject, useEffect, useRef, useState } from "react";
 
 type UseScrollHook = {
     ref: MutableRefObject<HTMLElement|null>;
@@ -9,7 +9,7 @@ export const useScroll = (): UseScrollHook => {
     const ref = useRef<HTMLElement|null>(null);
     const [top, setTop] = useState<Number>(9999);
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         window.addEventListener('scroll', () => {
             if(ref.current != null){
                 const { top: offsetTop } = ref.current.getBoundingClientRect();

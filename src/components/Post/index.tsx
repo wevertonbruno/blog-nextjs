@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ReactElement } from "react";
 import { FaInstagram, FaFacebookSquare, FaWhatsapp, FaShareAlt } from 'react-icons/fa'
 import { Container, OverLine, Title, BodyText } from './styles';
@@ -5,18 +6,21 @@ import { Container, OverLine, Title, BodyText } from './styles';
 
 type PostProps = {
     title: String;
+    slug: String;
     body: String;
     data: String;
 }
 
-export const Post = ({title, data, body}: PostProps): ReactElement => {
+export const Post = ({title, data, body, slug}: PostProps): ReactElement => {
     return (
         <Container>
             <OverLine position="top">
                 {data}
             </OverLine>
             <Title>
-                {title}
+                <Link href={`/posts/${slug}`}>
+                    {title}
+                </Link>
             </Title>
             <BodyText>
                 {body}

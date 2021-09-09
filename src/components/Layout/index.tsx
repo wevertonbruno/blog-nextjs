@@ -1,7 +1,8 @@
 import { ReactNode } from "react";
 import { ReactElement } from "react";
-import { Container } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import { Aside } from "../Aside";
+import { Contato } from "../Contato";
 import { Header } from "../Header";
 import { Body, Main } from "./styles";
 
@@ -17,6 +18,9 @@ export const Layout = ({ children }: LayoutProps): ReactElement => {
                 <Body>
                     <section>
                         {children}
+                        <Row className="mt-5">
+                            <Contato />
+                        </Row>
                     </section>
                     <Aside />
                 </Body>

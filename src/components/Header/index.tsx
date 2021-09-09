@@ -43,14 +43,14 @@ export const Header = (): ReactElement => {
                     </NavLogo>
                     <Navbar>
                         <li><Link href="/"><a>home</a></Link></li>
-                        <li><Link href="/"><a>sobre</a></Link></li>
+                        <li><Link href="/sobre"><a>sobre</a></Link></li>
                         <li>
                             <DropDown title="conteúdos" items={[
                                 { label: 'organização', url: '/organizacao' },
                                 { label: 'estudos', url: '/estudos' }
                             ]}/>
                         </li>
-                        <li><Link href="/"><a>contato</a></Link></li>
+                        <li><a href="#contato">contato</a></li>
                     </Navbar>
                     <SearchBarWrapper>
                         <SearchBar placeholder="buscar..." />

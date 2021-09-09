@@ -13,7 +13,11 @@ export const BodyText = styled.p`
     font-size: 1.2rem;
 `;
 
-export const Title = styled.h2`   
+export const Title = styled.h2`
+    >a{
+        text-decoration: none;
+        color: inherit;
+    }
 `;
 
 const mixinTop = css`

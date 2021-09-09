@@ -1,25 +1,31 @@
-import { ReactElement } from "react";
-import { useScroll } from '../../hooks/useScroll';
+import { ReactElement } from 'react';
+import { Col, Form, Row } from 'react-bootstrap';
+import { ButtonPrimary } from '../Form/ButtonPrimary';
+import { Input } from '../Form/Input';
+import { TextArea } from '../Form/textarea';
+import { Container } from './styles';
 
-import { Container, Flower, Wrapper } from './styles';
 
-
-export const Aside = (): ReactElement => {
-    const { ref, top } = useScroll();
-
-    const fixed = top <= 20;
-
+export const Contato = (): ReactElement => {
     return (
-        <Container ref={ref}>
-            <Wrapper fixed={fixed}>
-            <Flower src="/flor.png" />
-                <figure>
-                    <img src="/me.png" alt="Valéria Damasceno Foto" />
-                    <figcaption>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos odio corrupti quod inventore atque delectus nostrum eaque ex tenetur impedit?
-                    </figcaption>
-                </figure>
-            </Wrapper>
+        <Container id="contato">
+            <h3>Entre em contato</h3>
+            <Form>
+                <Row>
+                    <Col md={6}>
+                        <Input label="Nome" type="text"/>
+                    </Col>
+                    <Col md={6}>
+                        <Input label="E-mail" type="email" required/>
+                    </Col>
+                    <Col md={12}>
+                        <TextArea label="Mensagem" rows={5} required/>
+                    </Col>
+                    <Col className="mt-2">
+                        <ButtonPrimary label="Enviar" />
+                    </Col>
+                </Row>
+            </Form>
         </Container>
     );
 }
