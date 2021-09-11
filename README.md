@@ -156,7 +156,7 @@ Project Link: [https://github.com/wevertonbruno/blog-nextjs](https://github.com/
 [issues-shield]: https://img.shields.io/github/issues/wevertonbruno/blog-nextjs.svg?style=for-the-badge
 [issues-url]: https://github.com/wevertonbruno/blog-nextjs/issues
 [license-shield]: https://img.shields.io/github/license/wevertonbruno/blog-nextjs.svg?style=for-the-badge
-[license-url]: https://github.com/wevertonbruno/blog-nextjs/blob/master/LICENSE.txt
+[license-url]: https://github.com/wevertonbruno/blog-nextjs/blob/main/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/oieusoweverton/
 [product-screenshot]: ![image](https://user-images.githubusercontent.com/u/6644833?v=4)
